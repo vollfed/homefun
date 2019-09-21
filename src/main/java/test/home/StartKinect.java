@@ -7,7 +7,7 @@ public class StartKinect {
 
     static final Logger logger = LogManager.getLogger(StartKinect.class.getName());
 
-    public static void main(String[] args) {
+    public static void start(String[] args) {
 
         StartKinect obj = new StartKinect();
         obj.runMe("mkyong");

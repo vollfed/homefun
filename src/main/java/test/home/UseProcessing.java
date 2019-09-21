@@ -15,8 +15,9 @@ public class UseProcessing extends PApplet {
     static final Logger logger = LogManager.getLogger(StartKinect.class.getName());
 
     KinectPV2 kinect;
+    KSkeleton skeleton;
 
-    public static void main(String[] args) {
+    public static void start(String[] args) {
 
         logger.info("ACTUALLY STARTING PROCESSING ");
         PApplet.main("test.home.UseProcessing");
@@ -47,7 +48,7 @@ public class UseProcessing extends PApplet {
 
         //individual JOINTS
         for (int i = 0; i < skeletonArray.size(); i++) {
-            KSkeleton skeleton = (KSkeleton) skeletonArray.get(i);
+            skeleton = (KSkeleton) skeletonArray.get(i);
             if (skeleton.isTracked()) {
                 KJoint[] joints = skeleton.getJoints();
 
@@ -161,6 +162,14 @@ public class UseProcessing extends PApplet {
                 fill(255, 255, 255);
                 break;
         }
+    }
+
+    public KSkeleton getSkeleton() {
+        return skeleton;
+    }
+
+    public void setSkeleton(KSkeleton skeleton) {
+        this.skeleton = skeleton;
     }
 
 }
