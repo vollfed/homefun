@@ -16,7 +16,7 @@ public class  KinectController {
     @GetMapping("/greeting")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 
-        String strHello = "\"This is greetings\"+ (KinectController.class.getName()";
+        String strHello = "This is greetings";
         logger.info(strHello);
         System.out.println(strHello);
 
@@ -24,6 +24,30 @@ public class  KinectController {
 
         //the same as html name in resourse folder
         return "greeting";
+    }
+
+    @GetMapping("/menu")
+    public String menu(Model model) {
+        //model.addAttribute("name", name);
+        String strHello = "This is menu";
+        logger.info(strHello);
+        System.out.println(strHello);
+
+        //the same as html name in resourse folder
+        return "menu";
+    }
+
+    @GetMapping("/kinect")
+    public String kinect(@RequestParam(name="command", required=false, defaultValue="start") String command, Model model) {
+
+        String strHello = "This is kinect command: "+ command;
+        logger.info(strHello);
+        System.out.println(strHello);
+
+        model.addAttribute("command", command);
+
+        //the same as html name in resourse folder
+        return "kinect";
     }
 
 }
