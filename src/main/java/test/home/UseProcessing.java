@@ -1,5 +1,5 @@
 package test.home;
-
+/*
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import processing.core.PApplet;
@@ -140,13 +140,13 @@ public class UseProcessing extends PApplet {
         popMatrix();
     }
 
-    /*
+
     Different hand state
-     KinectPV2.HandState_Open
-     KinectPV2.HandState_Closed
-     KinectPV2.HandState_Lasso
-     KinectPV2.HandState_NotTracked
-     */
+//     KinectPV2.HandState_Open
+//     KinectPV2.HandState_Closed
+//     KinectPV2.HandState_Lasso
+//     KinectPV2.HandState_NotTracked
+
     void handState(int handState) {
         switch (handState) {
             case KinectPV2.HandState_Open:
@@ -173,3 +173,4 @@ public class UseProcessing extends PApplet {
     }
 
 }
+*/
