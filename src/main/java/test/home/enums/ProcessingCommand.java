@@ -1,4 +1,4 @@
-package enums;
+package test.home.enums;
 
 public enum ProcessingCommand {
 

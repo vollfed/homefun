@@ -1,4 +1,4 @@
-package thread;
+package test.home.thread;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,7 +13,7 @@ public class ThreadPrototype implements Runnable {
 
         @Override
         public void run() {
-            logger.info("Called from thread");
+            logger.info("Called from test.home.thread");
         }
 
 

@@ -1,4 +1,4 @@
-package thread;
+package test.home.thread;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

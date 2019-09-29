@@ -1,6 +1,6 @@
-package controllers;
+package test.home.controllers;
 
-import enums.ProcessingCommand;
+import test.home.enums.ProcessingCommand;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import services.AsynchronousService;
-import services.ProcessingCommandService;
+import test.home.services.AsynchronousService;
+import test.home.services.ProcessingCommandService;
 
 
 @Controller
@@ -58,7 +58,9 @@ public class  KinectController {
         ProcessingCommand command = ProcessingCommand.getCommand(commandName);
         commandService.processCurrentCommand(command);
 
+        logger.info("Sending thread to sleep");
         asynchService.executeAsynchronously();
+        logger.info("Continue my business");
 
         model.addAttribute("command", command.getCommandName());
         //the same as html name in resourse folder
